@@ -1,0 +1,60 @@
+# Created by https://www.gitignore.io/api/java,intellij,gradle
+
+### Java ###
+*.class
+*.war
+*.ear
+*.jar
+
+# Compiled files
+target/
+bin/
+gen/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Virtual Machine files
+*.hprof
+*.hs_err_pid
+
+# Gradle files
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Caches
+out/
+
+### Spring Boot ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+log/
+logs/
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
