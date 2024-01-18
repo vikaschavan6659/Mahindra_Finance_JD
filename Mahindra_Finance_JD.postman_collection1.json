@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "748195b8-4032-4e19-84bd-2f8f2b9c7c78",
+		"name": "Mahindra_Finance_JD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add Lead",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"leadId\": 5,\n  \"firstName\": \"Vineet\",\n  \"middleName\": \"\",\n  \"lastName\": \"KV\",\n  \"mobileNumber\": \"8877887788\",\n  \"gender\": \"Male\",\n  \"dob\":\"20/11/1999\",\n  \"email\": \"v@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8084/api/v1/lead/add"
+			},
+			"response": [{
+			
+					    "status": "success",
+					    "data": "Created Leads Successfully",
+					    "errorResponse": null
+					}]
+		},
+		{
+			"name": "Get lead by mobile number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/api/v1/lead/get?mobileNumber=8877887788",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"api",
+						"v1",
+						"lead",
+						"get"
+					],
+					"query": [
+						{
+							"key": "mobileNumber",
+							"value": "8877887788"
+						}
+					]
+				}
+			},
+			"response": [{
+					    "status": "success",
+					    "data": [
+						 {
+						     "leadId": 4,
+						     "firstName": "Vineet",
+						     "middleName": "",
+						     "lastName": "KV",
+						     "mobileNumber": "8877887788",
+						     "gender": "Male",
+						     "dob": "20/11/1999",
+						     "email": "v@gmail.com"
+						 },
+						 {
+						     "leadId": 5,
+						     "firstName": "Vineet",
+						     "middleName": "",
+						     "lastName": "KV",
+						     "mobileNumber": "8877887788",
+						     "gender": "Male",
+						     "dob": "20/11/1999",
+						     "email": "v@gmail.com"
+						 }
+					    ],
+					    "errorResponse": null
+					}]
+		}
+	]
+}
